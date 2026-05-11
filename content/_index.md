@@ -1,16 +1,16 @@
 ---
-action_label: Read More &rarr;
+action_label: Continue &rarr;
 action_link: /about
 action_type: text
-description: Sit down, relax, and get to know Hugo Apéro. Built on top of Blogophonic, we wanted to create a polished Hugo theme with the right features for a true personal website. We set out to create a theme that is a pleasure to learn, and one that helps others get to know you better. It is more than a blog, with flexible custom layouts that help you introduce yourself online.
+description: Put some text here or leave blank?
 image_left: true
 images:
-- img/revoir.jpg
+- img/Cyrus headshot.jpg
 show_action_link: true
 show_social_links: true
-subtitle: A Hugo theme you'll want to hang out with
+subtitle: Geographer, researcher, & educator
 text_align_left: false
-title: Hugo Apéro
+title: Cyrus Sinai, PhD
 type: home
 ---
 

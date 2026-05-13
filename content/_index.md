@@ -1,8 +1,8 @@
 ---
-action_label: Continue &rarr;
+action_label: About me &rarr;
 action_link: /about
 action_type: text
-description: Put some text here or leave blank?
+## description: 
 image_left: true
 images:
 - img/Cyrus headshot.jpg

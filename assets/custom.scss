@@ -39,31 +39,32 @@
 
 
 
+/* Research page fixed left navigation */
 
-/* Publications page fixed left navigation */
-
-/* Keep the publications list centered under the page title */
+/* Keep the main Research content centered under the page title/subtitle */
 .publication-content {
   max-width: 58rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Keep section headings from hiding under the top nav when using jump links */
+/* Fixed left navigation that does not push or squish the main content */
+.sticky-publication-nav {
+  position: fixed;
+  top: 8rem;
+  left: calc(50% - 43rem);
+  width: 13rem;
+  z-index: 10;
+}
+
+/* Keep jump-link headings from hiding behind the top nav */
 .publication-section {
   scroll-margin-top: 7rem;
 }
 
-/* Fixed left navigation, positioned relative to the centered content */
-.sticky-publication-nav {
-  position: fixed;
-  top: 8rem;
-
-  /* This places the sidebar just to the left of the centered publication list */
-  left: calc(50% - 41rem);
-
-  width: 12rem;
-  z-index: 10;
+/* Give the Research overview the same rhythm as the publication sections */
+.research-overview {
+  margin-bottom: 4rem;
 }
 
 /* Remove border on final item in each section */
@@ -76,8 +77,14 @@
   opacity: 0.9;
 }
 
-/* On medium/small screens, put nav above the list instead of fixed on the side */
-@media screen and (max-width: 75em) {
+/* On small screens, make the sidebar normal rather than fixed */
+@media screen and (max-width: 50em) {
+  .publication-nav {
+    max-width: 58rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .sticky-publication-nav {
     position: static;
     width: auto;

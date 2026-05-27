@@ -1,1 +1,101 @@
 // Override this file to add your own SCSS styling.
+
+// Make the About page wider
+
+// .grid-container main.page-main {padding-left: 2rem; padding-right: 2rem; }
+
+// wider than Apero's default mw8
+// .grid-container main.page-main .page-content {max-width: 80rem; }
+
+// .grid-container main.page-main .page-body .measure, .grid-container main.page-main .page-body .measure-wide {max-width: none; }
+
+
+/* Make About page sidebar avatar larger and perfectly circular */
+.about-sidebar img[alt="avatar"],
+.about-sidebar img.avatar,
+.about-sidebar img {
+  width: 18rem !important;
+  height: 18rem !important;
+  min-width: 18rem !important;
+  max-width: 18rem !important;
+  min-height: 18rem !important;
+  max-height: 18rem !important;
+  border-radius: 50% !important;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Make About page sidebar social icons slightly larger */
+
+.about-sidebar a i,
+.about-sidebar a svg,
+.about-sidebar .fab,
+.about-sidebar .fas,
+.about-sidebar .ai {
+  font-size: 1.35rem !important;
+  width: 1.35rem !important;
+  height: 1.35rem !important;
+}
+
+
+
+
+/* Publications page fixed left navigation */
+
+/* Keep the publications list centered under the page title */
+.publication-content {
+  max-width: 58rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep section headings from hiding under the top nav when using jump links */
+.publication-section {
+  scroll-margin-top: 7rem;
+}
+
+/* Fixed left navigation, positioned relative to the centered content */
+.sticky-publication-nav {
+  position: fixed;
+  top: 8rem;
+
+  /* This places the sidebar just to the left of the centered publication list */
+  left: calc(50% - 41rem);
+
+  width: 12rem;
+  z-index: 10;
+}
+
+/* Remove border on final item in each section */
+.publication-section .publication-item:last-child {
+  border-bottom: 0;
+}
+
+/* Slightly quiet the right-side metadata */
+.publication-meta {
+  opacity: 0.9;
+}
+
+/* On medium/small screens, put nav above the list instead of fixed on the side */
+@media screen and (max-width: 75em) {
+  .sticky-publication-nav {
+    position: static;
+    width: auto;
+    z-index: auto;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .publication-content {
+    max-width: 58rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .publication-meta {
+    border-top: 1px solid currentColor;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+}

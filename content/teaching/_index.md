@@ -8,10 +8,10 @@ cascade:
   show_post_time: true
   sidebar:
     show_sidebar_adunit: false
-    text_link_label: View recent talks
-    text_link_url: /talk/
-description: |
-  This is a list for your talks, workshops, or other events with a time, date, and place.
+    text_link_label: View teaching
+    text_link_url: /teaching/
+  description: |
+    Selected teaching materials, lectures, workshops, and course-related resources.
 layout: list
 show_author_byline: true
 show_button_links: true
@@ -29,9 +29,11 @@ sidebar:
     to edit this content. 
   show_sidebar_adunit: false
   text_link_label: Subscribe via RSS
-  text_link_url: /talk/index.xml
-  title: Talks that Last
-title: Talks that Last
+  text_link_url: /teaching/index.xml
+  title: Teaching
+title: Teaching
+type: talk
+
 ---
 
 ** No content below YAML for the talk _index. This file provides front matter for the listing page layout and sidebar content. It is also a branch bundle, and all settings under `cascade` provide front matter for all pages inside talk/. You may still override any of these by changing them in a page's front matter.**

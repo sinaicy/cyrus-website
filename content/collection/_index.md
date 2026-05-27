@@ -21,4 +21,5 @@ show_post_thumbnail: true
 subtitle: A collection, minus the blog.
 thumbnail_left: false
 title: Create a Collection
+draft: true
 ---

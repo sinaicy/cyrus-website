@@ -12,6 +12,7 @@ subtitle: A tachyon /ˈtæki.ɒn/ or tachyonic particle is a hypothetical partic
 tags:
 - hugo-site
 title: Tachyons for Style
+type: project
 ---
 
 ![Tachyons Logo Script](tachyons-logo-script.png)

@@ -35,7 +35,7 @@ enableEmoji = true
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/CS initials - Prater Block Pro Regular.png"
   logo = "/img/CS initials - Prater Block Pro Regular.png"
-  mainSections = ["blog", "project", "talk"]
+  mainSections = ["blog", "projects", "publications", "teaching"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -50,12 +50,14 @@ enableEmoji = true
   # use a built-in color theme
   # one of: earth / forest / grayscale / magma / paper / peach / plum /
   #         poppy / primer / sky / violet / water 
+  # original color theme was grayscale, but both peach and poppy also look good - maybe switch to one of those?
   theme = "grayscale"
   
   # or, leave theme empty & make your own palette
   # see docs at https://hugo-apero.netlify.app/blog/color-themes/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
+
   # to use hex colors instead of named tachyons colors, include "hex" in filename
   custom_theme = "" 
   
@@ -146,43 +148,54 @@ enableEmoji = true
   # Configure header 
   [[menu.header]]
     name = "About"
-    title = "About Me"
+    title = "About"
     url = "/about/"
     weight = 1
+
+  [[menu.header]]
+    name = "Projects"
+    title = "Projects"
+    url = "/projects/"
+    weight = 2
+    
+  [[menu.header]]
+    name = "Publications"
+    title = "Publications"
+    url = "/publications/"
+    weight = 3
+
+  [[menu.header]]
+    name = "Teaching"
+    title = "Teaching"
+    url = "/teaching/"
+    weight = 4
+
   [[menu.header]]
     name = "Blog"
     title = "Blog"
     url = "/blog/"
-    weight = 2
-  [[menu.header]]
-    name = "Projects"
-    title = "Project Portfolio"
-    url = "/project/"
-    weight = 3
-    
-  ## Leaving out the sections below
-   [[menu.header]]
-    name = "Talks"
-    title = "Talks"
-    url = "/talk/"
-    weight = 4
-  [[menu.header]]
-    name = "A collection"
-    title = "A collection"
-    url = "/collection/"
     weight = 5
-  [[menu.header]]
-    name = "Elements"
-    title = "Element Page"
-    url = "/elements/"
-    weight = 6
-    
+
+## Hide pages for "A Collection" and "Elements" pages  
+ ## [[menu.header]]
+   ## name = "A collection"
+   ## title = "A collection"
+   ## url = "/collection/"
+   ## weight = 6
+
+  ## [[menu.header]]
+   ## name = "Elements"
+   ## title = "Element Page"
+   ## url = "/elements/"
+   ## weight = 7
+
   # Configure footer  
   [[menu.footer]]
     name = "License"
     title = "License"
     url = "/license/"
     weight = 1
+
   [[menu.footer]]
     name = "Contact"
     title = "Contact form"
@@ -190,11 +203,11 @@ enableEmoji = true
     weight = 2
     
   ## Leaving out the Hugo Apero contributors from the footer  
-  [[menu.footer]]
-    name = "Contributors"
-    title = "Contributors"
-    url = "/contributors/"
-    weight = 3
+  ## [[menu.footer]]
+  ##  name = "Contributors"
+  ##  title = "Contributors"
+  ##  url = "/contributors/"
+  ##  weight = 3
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]

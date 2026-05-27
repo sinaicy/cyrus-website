@@ -21,6 +21,7 @@ subtitle: An R Package
 tags:
 - hugo-site
 title: Bakeoff
+type: project
 ---
 
 ![Formspree Logo](formspree-logo.png)

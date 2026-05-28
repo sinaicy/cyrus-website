@@ -12,6 +12,7 @@ show_button_links: true
 layout: list-sidebar
 
 cascade:
+  layout: single-clean
   author: "Cyrus Sinai"
   show_author_byline: true
   show_post_date: true

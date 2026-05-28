@@ -145,3 +145,22 @@ The height is slightly less than 100vh so it does not cover the footer text.
     padding-top: 1rem;
   }
 }
+
+
+
+/* Lighter divider lines between individual publications */
+.research-list-sidebar .publication-item {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+  border-bottom-width: 1px;
+}
+
+/* Slightly stronger divider lines between major Research page sections */
+.research-list-sidebar .publication-section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+  padding-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+
+.research-list-sidebar .publication-section:last-child {
+  border-bottom: 0;
+}

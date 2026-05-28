@@ -9,7 +9,7 @@ thumbnail_left: true
 show_author_byline: true
 show_post_date: true
 show_button_links: true
-layout: list
+layout: list-sidebar
 
 cascade:
   author: "Cyrus Sinai"

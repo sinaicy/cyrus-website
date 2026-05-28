@@ -26,7 +26,6 @@
 }
 
 /* Make About page sidebar social icons slightly larger */
-
 .about-sidebar a i,
 .about-sidebar a svg,
 .about-sidebar .fab,
@@ -39,68 +38,108 @@
 
 
 
-/* Research page fixed left navigation */
 
-/* Keep the main Research content centered under the page title/subtitle */
-.publication-content {
+/* Research page: Blog-style sidebar + publication layout */
+
+/* Keep the main Research content readable and centered within the right-side content column */
+.research-list-sidebar .publication-content {
   max-width: 58rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Fixed left navigation that does not push or squish the main content */
-.sticky-publication-nav {
-  position: fixed;
-  top: 8rem;
-  left: calc(50% - 43rem);
-  width: 13rem;
-  z-index: 10;
+/* Match the intro width to the publication content area */
+.research-list-sidebar .publication-intro {
+  max-width: 58rem;
 }
 
 /* Keep jump-link headings from hiding behind the top nav */
-.publication-section {
+.research-list-sidebar .publication-section {
   scroll-margin-top: 7rem;
 }
 
 /* Give the Research overview the same rhythm as the publication sections */
-.research-overview {
+.research-list-sidebar .research-overview {
   margin-bottom: 4rem;
 }
 
 /* Remove border on final item in each section */
-.publication-section .publication-item:last-child {
+.research-list-sidebar .publication-section .publication-item:last-child {
   border-bottom: 0;
 }
 
 /* Slightly quiet the right-side metadata */
-.publication-meta {
+.research-list-sidebar .publication-meta {
   opacity: 0.9;
 }
 
-/* On small screens, make the sidebar normal rather than fixed */
-@media screen and (max-width: 50em) {
-  .publication-nav {
-    max-width: 58rem;
-    margin-left: auto;
-    margin-right: auto;
+
+/* 
+Research sidebar:
+Make the entire sidebar sticky as one unit, including image + text.
+The height is slightly less than 100vh so it does not cover the footer text.
+*/
+.research-page-sidebar {
+  position: sticky !important;
+  top: 0 !important;
+  align-self: flex-start;
+
+  min-height: calc(100vh - 5rem);
+  height: calc(100vh - 5rem);
+
+  overflow-y: auto;
+}
+
+/* The inner sidebar content should NOT be independently sticky */
+.research-page-sidebar .research-sidebar-inner {
+  position: static !important;
+}
+
+/* Keep the sidebar image normal within the sticky sidebar */
+.research-page-sidebar img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Make Research sidebar links larger and remove underlines */
+.research-page-sidebar .research-sidebar-inner a {
+  font-size: 1rem;
+  line-height: 1.35;
+  text-decoration: none !important;
+}
+
+/* Keep sidebar links from showing underline on hover/focus */
+.research-page-sidebar .research-sidebar-inner a:hover,
+.research-page-sidebar .research-sidebar-inner a:focus {
+  text-decoration: none !important;
+}
+
+/* Add a little more vertical spacing between sidebar links */
+.research-page-sidebar .research-sidebar-inner small {
+  padding-top: 1rem;
+}
+
+/* Make the Research sidebar title slightly more prominent */
+.research-page-sidebar .research-sidebar-inner h1 {
+  font-size: 1.7rem;
+}
+
+
+/* On small screens, stack like Apéro's normal sidebar layout */
+@media screen and (max-width: 768px) {
+  .research-page-sidebar {
+    position: static !important;
+    min-height: auto;
+    height: auto;
+    overflow-y: visible;
   }
 
-  .sticky-publication-nav {
-    position: static;
-    width: auto;
-    z-index: auto;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
+  .research-page-sidebar .research-sidebar-inner {
+    position: static !important;
   }
 
-  .publication-content {
-    max-width: 58rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .publication-meta {
+  .research-list-sidebar .publication-meta {
     border-top: 1px solid currentColor;
     margin-top: 1rem;
     padding-top: 1rem;

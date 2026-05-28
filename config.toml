@@ -28,13 +28,13 @@ enableEmoji = true
   [markup.highlight]
     # one of: https://xyproto.github.io/splash/docs/ 
     style = "github"
-    
+
 [params]
   orgName = "RStudio"
   orgLocal = "Anywhere"
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
-  favicon = "/img/CS initials - Prater Block Pro Regular.png"
-  logo = "/img/CS initials - Prater Block Pro Regular.png"
+  favicon = "/img/CS initials - Prater Block Pro Regular - no background.png"
+  logo = "/img/CS initials - Prater Block Pro Regular - no background.png"
   mainSections = ["blog", "projects", "research", "teaching"]
   navallcaps = true
   # show/hide social icons in site header & footer

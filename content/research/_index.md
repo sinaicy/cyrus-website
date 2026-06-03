@@ -18,6 +18,7 @@ cascade:
   show_post_date: true
   show_comments: false
   show_button_links: true
+  
 ---
 
 My research examines the spatial dimensions of health systems, infrastructure, and development, with a particular focus on sub-Saharan Africa. I use geospatial analysis, survey data, and impact evaluation methods to study how access to energy, health facility infrastructure, and other place-based resources shape health service availability and population health outcomes.

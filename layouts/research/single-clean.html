@@ -1,31 +1,31 @@
 {{ define "main" }}
 
-<main class="page-main pa4" role="main">
-  <section class="page-content mw7 center">
+<main class="page-main pa4 research-single-page" role="main">
+  <section class="page-content research-single-content center">
 
     <article class="post-content pa0 ph4-l">
 
       <header class="post-header">
 
-        <h1 class="f1 lh-solid measure-narrow mb3 fw4">
+        <h1 class="f1 lh-solid mb3 fw4">
           {{ .Title }}
         </h1>
 
         {{ with .Params.publication }}
-          <p class="f4 mt0 mb3 lh-title measure i">
+          <p class="f4 mt0 mb3 lh-title i">
             {{ . | markdownify }}
           </p>
         {{ end }}
 
         {{ with .Params.author }}
-          <p class="f6 measure lh-copy mv2">
+          <p class="f6 lh-copy mv2">
             {{ . | markdownify }}
           </p>
         {{ end }}
 
         {{ if .Params.date }}
           <p class="f7 db mv0 ttu">
-            {{ .Date.Format "January 2, 2006" }}
+            {{ .Date.Format "January 2006" }}
           </p>
         {{ end }}
 
@@ -37,9 +37,25 @@
 
       </header>
 
-      <section class="post-body pt5 pb4">
-        {{ .Content }}
-      </section>
+      {{ with .Params.abstract }}
+        <section class="publication-abstract pt5 pb4">
+          <h2 class="f3 f2-ns lh-title fw4 mt0 mb3">
+            Abstract
+          </h2>
+
+          <div class="abstract-divider mb4"></div>
+
+          <div class="lh-copy">
+            {{ . | markdownify }}
+          </div>
+        </section>
+      {{ end }}
+
+      {{ with .Content }}
+        <section class="post-body pt4 pb4">
+          {{ . }}
+        </section>
+      {{ end }}
 
     </article>
 

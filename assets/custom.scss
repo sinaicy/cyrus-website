@@ -164,3 +164,48 @@ The height is slightly less than 100vh so it does not cover the footer text.
 .research-list-sidebar .publication-section:last-child {
   border-bottom: 0;
 }
+
+
+
+
+
+/* Individual Research/publication pages */
+
+/* Make individual publication pages wider */
+.research-single-page .research-single-content {
+  width: calc(100vw - 8rem);
+  max-width: 88rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep very long titles readable */
+.research-single-page .post-header h1 {
+  max-width: 70rem;
+}
+
+/* Abstract section divider, inspired by Silvia's structure but using this site's styling */
+.research-single-page .abstract-divider {
+  border-bottom: 1px solid currentColor;
+  opacity: 0.35;
+}
+
+/* Make abstract/body text use the wider page rather than a narrow measure */
+.research-single-page .post-body,
+.research-single-page .publication-abstract .lh-copy {
+  max-width: 70rem;
+}
+
+/* Mobile-friendly width */
+@media screen and (max-width: 768px) {
+  .research-single-page .research-single-content {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .research-single-page .post-header h1,
+  .research-single-page .post-body,
+  .research-single-page .publication-abstract .lh-copy {
+    max-width: 100%;
+  }
+}

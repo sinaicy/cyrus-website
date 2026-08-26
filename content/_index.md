@@ -8,7 +8,7 @@ images:
 - img/Cyrus headshot.jpg
 show_action_link: true
 show_social_links: true
-subtitle: Geographer, researcher, & educator (TEST)
+subtitle: Geographer, researcher, & educator
 text_align_left: false
 title: Cyrus Sinai, PhD
 type: home
